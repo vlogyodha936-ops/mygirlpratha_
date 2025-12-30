@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Flowers - For My Love Pratha 💐</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Arial, Calibri, Helvetica, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-bottom: 3px solid #ff69b4;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff69b4;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: #ff69b4;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #ff69b4;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, #ffe4e1 0%, #ffc0cb 100%);
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .hero-content h1 .highlight {
+            color: #ff69b4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-content .subtitle {
+            font-size: 2rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-btn {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 20px 55px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
+        }
+
+        .hero-btn:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            transition: all 0.5s;
+        }
+
+        .hero-btn:hover:after {
+            left: 120%;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.4);
+            border: 8px solid white;
+            transition: transform 0.5s;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: float 4s ease-in-out infinite;
+            border: 2px solid #ff69b4;
+            z-index: 3;
+        }
+
+        .badge-1 {
+            top: 5%;
+            left: -30px;
+            animation-delay: 0.5s;
+        }
+
+        .badge-2 {
+            bottom: 15%;
+            right: -30px;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-25px) rotate(2deg); }
+        }
+
+        /* Floating Hearts Background */
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0;
+            animation: floatHeart 15s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 120px 40px;
+            background: white;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #ffc0cb, #ff69b4);
+        }
+
+        .section-header .highlight {
+            color: #ff69b4;
+            position: relative;
+        }
+
+        .section-header p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(255, 192, 203, 0.2);
+            border: 1px solid rgba(255, 192, 203, 0.3);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 380px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        .product-info {
+            padding: 35px 30px;
+        }
+
+        .product-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .product-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #ffc0cb;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .add-to-cart {
+            background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 192, 203, 0.3);
+        }
+
+        .add-to-cart:hover {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #fff5f7, #ffe4e1);
+            position: relative;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.3);
+            border: 8px solid white;
+            position: relative;
+            height: 500px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,105,180,0.1), rgba(255,192,203,0.1));
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+        }
+
+        .about-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #ffc0cb, #ff69b4);
+        }
+
+        .about-content p {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            align-items: start;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 192, 203, 0.2);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Interactive Questions Section */
+        .questions-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .questions-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 20px;
+            padding: 45px 40px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+
+        .question-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+        }
+
+        .question-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+        }
+
+        .question-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 35px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .question-text:before {
+            content: '💖';
+            position: absolute;
+            left: 0;
+            font-size: 2rem;
+        }
+
+        .question-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .q-btn {
+            flex: 1;
+            padding: 18px 25px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Times New Roman', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .yes-btn {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+        }
+
+        .yes-btn:hover {
+            background: linear-gradient(135deg, #ff1493, #c71585);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        }
+
+        .no-btn {
+            background: white;
+            color: #333;
+            border: 2px solid #ffc0cb;
+            box-shadow: 0 5px 15px rgba(255, 192, 203, 0.2);
+        }
+
+        .no-btn:hover {
+            background: #ffe4e1;
+            border-color: #ff69b4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+        }
+
+        .answer-message {
+            margin-top: 40px;
+            padding: 35px;
+            background: linear-gradient(135deg, #fff5f7, #ffe4e1);
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+            display: none;
+            animation: fadeIn 0.6s;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .answer-message.show {
+            display: block;
+        }
+
+        /* Photo Gallery Section */
+        .gallery-section {
+            padding: 120px 40px;
+            background: white;
+        }
+
+        .gallery-grid {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(255, 105, 180, 0.8));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Blessing Section */
+        .blessing-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #fff, #ffe4e1);
+            text-align: center;
+            position: relative;
+        }
+
+        .blessing-cards {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .blessing-card {
+            background: white;
+            padding: 50px 35px;
+            border-radius: 20px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 192, 203, 0.2);
+            border: 1px solid rgba(255, 192, 203, 0.3);
+        }
+
+        .blessing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.3);
+        }
+
+        .blessing-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+        }
+
+        .blessing-icon {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .blessing-card h4 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .blessing-card h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #ffc0cb;
+        }
+
+        .blessing-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+
+        /* Secret Love Message Section */
+        .secret-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secret-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .secret-btn {
+            background: white;
+            color: #ff69b4;
+            padding: 25px 60px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secret-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            background: #ffe4e1;
+        }
+
+        .secret-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .secret-btn:hover:before {
+            left: 100%;
+        }
+
+        .secret-message {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            margin-top: 40px;
+            display: none;
+            animation: fadeIn 0.8s;
+            border: 5px solid #ffc0cb;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secret-message:before {
+            content: '💖';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.2;
+        }
+
+        .secret-message h3 {
+            color: #ff69b4;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .secret-message h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #ffc0cb, #ff69b4);
+        }
+
+        .secret-message p {
+            font-size: 1.4rem;
+            line-height: 1.9;
+            color: #666;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .secret-message .signature {
+            font-size: 1.6rem;
+            color: #ff69b4;
+            margin-top: 40px;
+            font-weight: bold;
+            text-align: right;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 80px 40px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content h3 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .footer-content .names {
+            font-size: 2.5rem;
+            color: #ffe4e1;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin: 50px 0 40px;
+        }
+
+        .social-links a {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.4s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #ff69b4;
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Heart Rain */
+        .heart-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10000;
+            display: none;
+        }
+
+        .falling-heart {
+            position: absolute;
+            font-size: 28px;
+            animation: fall linear forwards;
+            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .about-container,
+            .hero-container {
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container,
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .floating-badge {
+                display: none;
+            }
+
+            .products-grid,
+            .reviews-grid,
+            .questions-grid,
+            .blessing-cards,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image img {
+                max-width: 400px;
+            }
+
+            .question-text {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .question-text:before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+
+            .hero,
+            .products-section,
+            .about-section,
+            .questions-section,
+            .gallery-section,
+            .blessing-section,
+            .secret-section {
+                padding: 80px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .question-buttons {
+                flex-direction: column;
+            }
+
+            .secret-btn {
+                padding: 20px 30px;
+                font-size: 1.3rem;
+            }
+
+            .secret-message {
+                padding: 30px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            font-size: 24px;
+            text-align: center;
+            line-height: 40px;
+            animation: cursorFloat 2s infinite ease-in-out;
+            display: none;
+        }
+
+        @keyframes cursorFloat {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                💐 Forever Flowers 
+                <span style="font-size: 1.2rem; color: #ff69b4;">For Pratha</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#feelings">MY FEELINGS</a></li>
+                <li><a href="#about">OUR LOVE</a></li>
+                <li><a href="#gallery">MEMORIES</a></li>
+                <li><a href="#video">VIDEO</a></li>
+                <li><a href="#questions">QUESTIONS</a></li>
+                <li><a href="#blessings">BLESSINGS</a></li>
+                <li><a href="#secret">SECRET</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="subtitle">For My Dearest Pratha</div>
+                <h1>My Love For <span class="highlight">You</span> Is Eternal 💖</h1>
+                <p>Every moment with you is a blessing, every memory is a treasure. This is my way of showing you just how much you mean to me. Every word here comes straight from my heart to yours.</p>
+                <a href="#questions" class="hero-btn">Answer My Questions 💕</a>
+            </div>
+            <div class="hero-image">
+                <!-- Your couple photo -->
+                <img src="photo/ourbabyphoto.JPG" alt="Us Together" onclick="openModal(this)" style="cursor: pointer;">
+                <div class="floating-badge badge-1">
+                    <div style="font-size: 2.5rem; color: #ff69b4; margin-bottom: 10px;">💝</div>
+                    <p style="font-weight: 600; color: #333; margin: 0;">Made With Love</p>
+                </div>
+                <div class="floating-badge badge-2">
+                    <div style="font-size: 1.5rem; color: #ff69b4; font-weight: bold; margin-bottom: 5px;">For Pratha Only</div>
+                    <p style="color: #666; margin: 0;">My Special One</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Feelings Section -->
+    <section class="products-section" id="feelings">
+        <div class="section-header">
+            <h2>My <span class="highlight">Feelings</span> for You</h2>
+            <p>Each represents a beautiful feeling I have for you, my love</p>
+        </div>
+        <div class="products-grid">
+            <!-- Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/hi.jpeg" alt="Pure Love" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="product-badge">PURE LOVE</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">My Heart Belongs to You</h3>
+                    <p class="product-description">Every beat of my heart whispers your name. You have my whole heart, now and forever, in this life and the next.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Eternal</span>
+                        <button class="add-to-cart" onclick="showHeartRain()">Feel My Love</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/beautiful.jpeg" alt="Blessing" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="product-badge">MY BLESSING</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">You're My Greatest Blessing</h3>
+                    <p class="product-description">Meeting you was God's greatest gift to me. You make my world complete and my life meaningful.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Divine</span>
+                        <button class="add-to-cart" onclick="showBlessingMessage()">Receive Blessing</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/pratha.jpeg" alt="Queen" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">My Beautiful Queen</h3>
+                    <p class="product-description">You reign over my heart like a queen. Your grace, beauty, and strength leave me in awe every single day.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Royal</span>
+                        <button class="add-to-cart" onclick="showQueenMessage()">For My Queen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/herbabyphoto.jpg" alt="Promise" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="product-badge">MY PROMISE</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">My Eternal Promise</h3>
+                    <p class="product-description">I promise to cherish you, respect you, protect you, and love you endlessly through all of life's seasons.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Forever</span>
+                        <button class="add-to-cart" onclick="showPromiseMessage()">My Promise</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/pratha5.jpeg" alt="Future" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Our Beautiful Future</h3>
+                    <p class="product-description">I dream of building a life with you filled with love, laughter, and countless precious memories.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Bright</span>
+                        <button class="add-to-cart" onclick="showFutureMessage()">Dream With Me</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="photo/IMG_6255.JPG" alt="Smile" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Your Beautiful Smile</h3>
+                    <p class="product-description">Your smile is my sunshine, it lights up my world and makes every problem disappear instantly.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Priceless</span>
+                        <button class="add-to-cart" onclick="showSmileMessage()">See My Smile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <h2>Our <span class="highlight">Beautiful</span> Memories</h2>
+            <p>Every moment with you is a memory I treasure forever</p>
+        </div>
+        <div class="gallery-grid">
+            <!-- Add your photos here -->
+            <div class="gallery-item">
+                <img src="photo/ourphoto." alt="Our Special Moment">
+                <div class="gallery-overlay">
+                </div>
+            </img>
+            <div class="gallery-item">
+                <img src="photo/beautiful.jpeg" alt="Beautiful Times">
+                <div class="gallery-overlay">
+                    <h4>Beautiful You</h4>
+                    <p>Every moment with you is beautiful</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/IMG_5724.jpeg" alt="Happy Times">
+                <div class="gallery-overlay">
+                    <h4>Happy Times</h4>
+                    <p>Your smile makes everything beautiful</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/IMG_1826.jpeg" alt="Forever Together">
+                <div class="gallery-overlay">
+                    <h4>Forever Together</h4>
+                    <p>My favorite place is with you</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/pratha.jpeg" alt="Lovely Pratha">
+                <div class="gallery-overlay">
+                    <h4>You Are Amazing</h4>
+                    <p>My beautiful love</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/babyher.JPG" alt="Baby Love">
+                <div class="gallery-overlay">
+                    <h4>My Baby</h4>
+                    <p>Forever my darling</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="position: relative; background: #000; cursor: pointer;" onclick="openVideoMemory()">
+                <video style="width: 100%; height: 100%; object-fit: cover;" muted>
+                    <source src="video/ourtiktok.mp4" type="video/mp4">
+                    <source src="video/all_video.mp4" type="video/mp4">
+                    <source src="video/sherantome.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-overlay">
+                    <h4>▶️ Our Special Video Memory</h4>
+                    <p>Click to watch our beautiful moments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Questions Section -->
+    <section class="questions-section" id="questions">
+        <div class="questions-container">
+            <div class="section-header" style="color: white;">
+                <h2 style="color: white;">Questions From My <span style="color: #ffe4e1;">Heart</span></h2>
+                <p style="color: white; opacity: 0.95;">Answer these special questions for me, my love 💝</p>
+            </div>
+            <div class="questions-grid">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="question-text">Do you know how incredibly special you are to me? 💖</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes1')">💝 YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">🤔 NO</button>
+                    </div>
+                    <div class="answer-message" id="answer1"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="question-text">Will you always keep smiling that beautiful smile for me? 😊</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes2')">😊 YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">😔 NO</button>
+                    </div>
+                    <div class="answer-message" id="answer2"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="question-text">Do you feel deeply loved and cherished when you're with me? 💗</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes3')">💗 YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">💔 NO</button>
+                    </div>
+                    <div class="answer-message" id="answer3"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="question-text">Can I be your forever blessing and protector? ♾️</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes4')">♾️ YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">⏳ NO</button>
+                    </div>
+                    <div class="answer-message" id="answer4"></div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="question-text">Do you believe in our beautiful future together? ✨</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes5')">✨ YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">❓ NO</button>
+                    </div>
+                    <div class="answer-message" id="answer5"></div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="question-text">Will you let me protect and cherish you forever? 🛡️</div>
+                    <div class="question-buttons">
+                        <button class="q-btn yes-btn" onclick="showAnswer(this, 'yes6')">🛡️ YES</button>
+                        <button class="q-btn no-btn" onclick="moveNoButton(this)">🚫 NO</button>
+                    </div>
+                    <div class="answer-message" id="answer6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video" style="padding: 120px 40px; background: linear-gradient(135deg, #ffe4e1, #fff5f7); text-align: center;">
+        <div class="section-header">
+            <h2>A Special <span class="highlight">Memory</span> For You</h2>
+            <p>A beautiful video message with the sweetest sound 💕🎵</p>
+        </div>
+        <div style="max-width: 800px; margin: 60px auto; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);">
+            <video width="100%" height="auto" controls controlsList="nodownload" style="display: block; width: 100%; border-radius: 20px;" muted="false" autoplay="false">
+                <source src="video/hello.mp4" type="video/mp4">
+                <source src="video/hello.MOV" type="video/quicktime">
+                Your browser doesn't support HTML5 video. Please use a modern browser to watch our special video message.
+            </video>
+        </div>
+    </section>
+
+    <!-- Blessing Section -->
+    <section class="blessing-section" id="blessings">
+        <div class="section-header">
+            <h2>My <span class="highlight">Blessings</span> For You</h2>
+            <p>May God always bless my dear Pratha with endless happiness and love</p>
+        </div>
+        <div class="blessing-cards">
+            <div class="blessing-card">
+                <div class="blessing-icon">🙏</div>
+                <h4>Divine Protection</h4>
+                <p>May God's angels always surround you, protecting you from all harm and guiding you on the right path every single day.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <div class="blessing-icon">💕</div>
+                <h4>Abundant Love</h4>
+                <p>May your heart always overflow with genuine love - from family, friends, and especially from the one who loves you most.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <div class="blessing-icon">😊</div>
+                <h4>Endless Happiness</h4>
+                <p>May joy follow you wherever you go, and may your beautiful smile never fade from your lovely face.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <div class="blessing-icon">🌟</div>
+                <h4>Success & Prosperity</h4>
+                <p>May all your dreams come true, and may success be your constant companion in every endeavor.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <div class="blessing-icon">💪</div>
+                <h4>Strength & Courage</h4>
+                <p>May you find strength in challenges and courage in difficult times. Remember, you are stronger than you know.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <div class="blessing-icon">🕊️</div>
+                <h4>Peace & Serenity</h4>
+                <p>May peace dwell in your heart and mind, bringing you calmness and contentment in every moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secret Love Message Section -->
+    <section class="secret-section" id="secret">
+        <div class="secret-container">
+            <h2 style="color: white; font-size: 3rem; margin-bottom: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">A Secret Just For You, Pratha 💌</h2>
+            <button class="secret-btn" onclick="revealSecretMessage()">
+                <i class="fas fa-lock"></i> Click to Open Secret Message
+            </button>
+            
+            <div class="secret-message" id="secretMessage">
+                <h3>My Dearest Pratha,</h3>
+                <p>There's something I need to tell you that I've been holding in my heart for so long...</p>
+                <p>You are the most amazing person I've ever had the privilege to know. Every day with you feels like a blessing from above. Your kindness, your beautiful smile, your gentle soul - everything about you makes me fall in love with you more deeply each day.</p>
+                <p>I want you to know that no matter what life brings, I will always be here for you. I will protect you, cherish you, respect you, and love you with every fiber of my being. You deserve the entire world, and I promise to give you my very best every single day.</p>
+                <p>Thank you for being you. Thank you for coming into my life. Thank you for making everything better just by existing. You are my sunshine, my strength, and my everything.</p>
+                <p class="signature">I love you more than words can ever express.<br>Forever and always yours. 💖</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>For My Special Pratha Only 💕</h3>
+            <div class="names">Made with Love • For Pratha • From Your Love</div>
+            <p>This website was created with all the love in my heart, just for you. Every element represents my feelings, my promises, and my wishes for you.</p>
+            <p>May God bless you always and keep you safe. You are loved more than you'll ever know, cherished more than you can imagine, and treasured beyond measure.</p>
+            
+            <div class="social-links">
+                <a href="javascript:void(0)" onclick="showHeartRain()" title="My Love">💖</a>
+                <a href="javascript:void(0)" onclick="showBlessingMessage()" title="Blessings">🙏</a>
+                <a href="javascript:void(0)" onclick="showLoveMessage()" title="Love Message">💌</a>
+                <a href="javascript:void(0)" onclick="showPromiseMessage()" title="My Promise">🤝</a>
+                <a href="javascript:void(0)" onclick="createHeartsAround(document.body)" title="Hearts Everywhere">💕</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Made with ❤️ for the most special person in my life - My Dear Pratha | Forever Yours</p>
+                <p style="margin-top: 10px; font-size: 1rem;">Every day with you is a blessing I thank God for</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Heart Rain Container -->
+    <div class="heart-rain" id="heartRain"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">💖</div>
+
+    <script>
+        // Interactive Questions Answers
+        const answers = {
+            yes1: "I'm so glad you know how incredibly special you are to me! You're not just special - you're the most precious person in my life, my everything. 💖",
+            yes2: "Your smile is my favorite thing in the entire world! Keep smiling that beautiful smile, and I promise to always give you countless reasons to smile. 😊",
+            yes3: "I'm overwhelmed with joy knowing you feel deeply loved! I will spend my entire life making sure you feel cherished, respected, and adored every single moment. 💗",
+            yes4: "Thank you for letting me be your forever blessing! I promise to always be your protector, your support, and a constant source of happiness in your life. ♾️",
+            yes5: "Our future together is going to be absolutely magical! I can't wait to build beautiful memories with you, grow with you, and love you more each day. ✨",
+            yes6: "I will protect and cherish you with all my heart and soul. You are my most precious treasure, and I'll always keep you safe and loved. 🛡️",
+            
+            no1: "Then let me tell you with all my heart - you are the most special person in my entire universe! More special than all the stars in the sky combined. 🌟",
+            no2: "Please don't ever stop smiling! Your smile is my sunshine that brightens even my darkest days. I promise to work tirelessly to keep that beautiful smile on your face forever. ☀️",
+            no3: "I promise to show you even more love every single day until you feel it radiating from every corner of your beautiful heart. 💕",
+            no4: "I'll dedicate my life to becoming your greatest blessing! I want to bring only joy, peace, and happiness into your precious life. 🙏",
+            no5: "Let's build that beautiful future together, hand in hand! I believe in us with all my heart, and I know we can create something truly magical together. 🏰",
+            no6: "Please let me protect you and cherish you! You deserve to feel safe, loved, and cherished every moment. I want to be your safe haven forever. 🛡️"
+        };
+
+        // Love Score System
+        let loveScore = 0;
+
+        // Love Quiz Game
+        const loveQuiz = [
+            {
+                question: "What's my favorite thing about you?",
+                options: ["Your Smile 😊", "Your Kind Heart 💖", "Your Intelligence 🧠", "Everything! ✨"],
+                correct: 3,
+                message: "Exactly right! I love EVERYTHING about you! You're perfect in every way! 💫"
+            },
+            {
+                question: "What would I do to make you happy?",
+                options: ["Give you gifts 🎁", "Spend time with you ⏰", "Surprise you! 🎉", "All of the above 💝"],
+                correct: 3,
+                message: "Yes! I would do anything and everything to make you happy, my love! 💕"
+            },
+            {
+                question: "What's my promise to you?",
+                options: ["To always protect you 🛡️", "To make you smile daily 😊", "To love you forever ♾️", "All promises above 🤝"],
+                correct: 3,
+                message: "Perfect! I promise ALL of these and more! Every day I'll show you my love! 🌈"
+            }
+        ];
+
+        // Memory Matching Game
+        const memoryCards = [
+            '💖', '💖', '💕', '💕', '💗', '💗', '💓', '💓',
+            '💝', '💝', '💘', '💘', '💌', '💌', '💞', '💞',
+            '🥰', '🥰', '😍', '😍', '💑', '💑', '👫', '👫'
+        ];
+
+        // Interactive Activities
+        let currentQuizIndex = 0;
+        let matchedPairs = 0;
+        let firstCard = null;
+        let secondCard = null;
+        let isBoardLocked = false;
+
+        // Start Love Quiz
+        function startLoveQuiz() {
+            showNotification("Let's play a love quiz about us! ❤️");
+            setTimeout(() => {
+                showQuizQuestion(currentQuizIndex);
+            }, 1500);
+        }
+
+        function showQuizQuestion(index) {
+            if (index >= loveQuiz.length) {
+                showNotification("Quiz completed! You got all answers right! You know our love perfectly! 🏆");
+                createHeartRain(200);
+                return;
+            }
+
+            const quiz = loveQuiz[index];
+            const quizHTML = `
+                <div class="quiz-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10001; display: flex; justify-content: center; align-items: center;">
+                    <div style="background: white; padding: 40px; border-radius: 20px; max-width: 600px; width: 90%; box-shadow: 0 20px 60px rgba(255,105,180,0.3); border: 5px solid #ff69b4;">
+                        <h2 style="color: #ff69b4; margin-bottom: 20px;">Love Quiz Question ${index + 1} 💕</h2>
+                        <p style="font-size: 1.4rem; margin-bottom: 30px;">${quiz.question}</p>
+                        <div class="quiz-options">
+                            ${quiz.options.map((option, i) => `
+                                <button onclick="checkQuizAnswer(${i}, ${quiz.correct}, ${index})" 
+                                        style="display: block; width: 100%; padding: 15px; margin: 10px 0; background: linear-gradient(135deg, #ffc0cb, #ff69b4); color: white; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; transition: all 0.3s;">
+                                    ${option}
+                                </button>
+                            `).join('')}
+                        </div>
+                        <button onclick="closeQuizModal()" style="margin-top: 20px; padding: 10px 30px; background: #333; color: white; border: none; border-radius: 10px; cursor: pointer;">Close</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', quizHTML);
+        }
+
+        function checkQuizAnswer(selected, correct, index) {
+            const modal = document.querySelector('.quiz-modal');
+            if (selected === correct) {
+                loveScore += 50;
+                updateLoveScore();
+                showNotification(`🎉 Correct! ${loveQuiz[index].message}`);
+                createHeartsAround(modal, 20);
+            } else {
+                showNotification("Almost! But remember, my love for you knows no bounds! 💖");
+            }
+            
+            setTimeout(() => {
+                modal.remove();
+                currentQuizIndex++;
+                if (currentQuizIndex < loveQuiz.length) {
+                    showQuizQuestion(currentQuizIndex);
+                } else {
+                    showNotification("Perfect score! You truly understand our love! 💯");
+                    createHeartRain(100);
+                    currentQuizIndex = 0;
+                }
+            }, 1500);
+        }
+
+        function closeQuizModal() {
+            const modal = document.querySelector('.quiz-modal');
+            if (modal) modal.remove();
+            currentQuizIndex = 0;
+        }
+
+        // Memory Game
+        function startMemoryGame() {
+            showNotification("Let's play a memory matching game with our love symbols! 🧠💖");
+            
+            const shuffledCards = [...memoryCards].sort(() => Math.random() - 0.5);
+            const gameHTML = `
+                <div class="memory-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #ff69b4, #ff1493); z-index: 10001; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+                    <h2 style="color: white; margin-bottom: 20px;">Memory Matching Game 💝</h2>
+                    <p style="color: white; margin-bottom: 30px;">Find all the matching love pairs!</p>
+                    <div id="memoryBoard" style="display: grid; grid-template-columns: repeat(6, 60px); gap: 10px; margin-bottom: 30px;">
+                        ${shuffledCards.map((card, index) => `
+                            <div class="memory-card" data-index="${index}" data-value="${card}" 
+                                 style="width: 60px; height: 60px; background: white; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                                ❓
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="color: white; margin-bottom: 20px; font-size: 1.2rem;">
+                        Matched Pairs: <span id="matchedCount">0</span> / 12
+                    </div>
+                    <button onclick="closeMemoryGame()" style="padding: 12px 30px; background: white; color: #ff69b4; border: none; border-radius: 25px; font-size: 1.2rem; cursor: pointer;">Close Game</button>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', gameHTML);
+            setupMemoryCards();
+        }
+
+        function setupMemoryCards() {
+            const cards = document.querySelectorAll('.memory-card');
+            cards.forEach(card => {
+                card.addEventListener('click', flipCard);
+            });
+        }
+
+        function flipCard() {
+            if (isBoardLocked) return;
+            if (this === firstCard) return;
+            
+            this.innerHTML = this.dataset.value;
+            this.style.background = 'linear-gradient(135deg, #ffc0cb, #ff69b4)';
+            
+            if (!firstCard) {
+                firstCard = this;
+                return;
+            }
+            
+            secondCard = this;
+            isBoardLocked = true;
+            
+            checkForMatch();
+        }
+
+        function checkForMatch() {
+            const isMatch = firstCard.dataset.value === secondCard.dataset.value;
+            
+            if (isMatch) {
+                disableCards();
+                matchedPairs++;
+                document.getElementById('matchedCount').textContent = matchedPairs;
+                loveScore += 25;
+                updateLoveScore();
+                
+                if (matchedPairs === 12) {
+                    setTimeout(() => {
+                        showNotification("🎊 Perfect Memory! You found all love pairs! 🏆");
+                        createHeartRain(150);
+                        loveScore += 200;
+                        updateLoveScore();
+                    }, 500);
+                }
+            } else {
+                unflipCards();
+            }
+        }
+
+        function disableCards() {
+            firstCard.style.cursor = 'default';
+            secondCard.style.cursor = 'default';
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+            
+            resetBoard();
+        }
+
+        function unflipCards() {
+            setTimeout(() => {
+                firstCard.innerHTML = '❓';
+                secondCard.innerHTML = '❓';
+                firstCard.style.background = 'white';
+                secondCard.style.background = 'white';
+                
+                resetBoard();
+            }, 1000);
+        }
+
+        function resetBoard() {
+            [firstCard, secondCard, isBoardLocked] = [null, null, false];
+        }
+
+        function closeMemoryGame() {
+            const modal = document.querySelector('.memory-modal');
+            if (modal) modal.remove();
+            matchedPairs = 0;
+            firstCard = null;
+            secondCard = null;
+            isBoardLocked = false;
+        }
+
+        // Love Score Update
+        function updateLoveScore() {
+            const scoreElement = document.getElementById('loveScore');
+            if (!scoreElement) {
+                const scoreHTML = `
+                    <div id="loveScore" style="position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ff69b4, #ff1493); color: white; padding: 15px 25px; border-radius: 50px; font-size: 1.2rem; font-weight: bold; z-index: 9999; box-shadow: 0 5px 20px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px;">
+                        💖 Love Score: ${loveScore}
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', scoreHTML);
+            } else {
+                scoreElement.innerHTML = `💖 Love Score: ${loveScore}`;
+            }
+        }
+
+        // Daily Challenge
+        function startDailyChallenge() {
+            const challenges = [
+                "Send me a sweet message today! 💌",
+                "Think of our happiest memory! 🌟",
+                "Smile thinking about me! 😊",
+                "Say 'I love you' to yourself in the mirror! 💖",
+                "Plan our dream date in your mind! 💑"
+            ];
+            
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            
+            const challengeHTML = `
+                <div class="challenge-modal" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(255,105,180,0.4); z-index: 10001; border: 5px solid #ff69b4; text-align: center; max-width: 400px; width: 90%;">
+                    <h2 style="color: #ff69b4; margin-bottom: 20px;">Daily Love Challenge 💝</h2>
+                    <p style="font-size: 1.3rem; margin-bottom: 30px;">${randomChallenge}</p>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <button onclick="completeChallenge()" style="padding: 12px 30px; background: linear-gradient(135deg, #ff69b4, #ff1493); color: white; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer;">Completed! ✅</button>
+                        <button onclick="closeChallenge()" style="padding: 12px 30px; background: #333; color: white; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer;">Skip</button>
+                    </div>
+                </div>
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000;"></div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', challengeHTML);
+        }
+
+        function completeChallenge() {
+            showNotification("Challenge completed! You're amazing! 🎉");
+            loveScore += 50;
+            updateLoveScore();
+            createHeartsAround(document.querySelector('.challenge-modal'), 20);
+            closeChallenge();
+        }
+
+        function closeChallenge() {
+            const modal = document.querySelector('.challenge-modal');
+            const overlay = document.querySelector('.challenge-modal + div');
+            if (modal) modal.remove();
+            if (overlay) overlay.remove();
+        }
+
+        // Show answer function
+        function showAnswer(button, answerKey) {
+            const questionCard = button.closest('.question-card');
+            const answerDiv = questionCard.querySelector('.answer-message');
+            const buttons = questionCard.querySelector('.question-buttons');
+            
+            // Hide the buttons with animation
+            buttons.style.opacity = '0';
+            buttons.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                buttons.style.display = 'none';
+            }, 300);
+            
+            // Show the answer with animation
+            answerDiv.innerHTML = answers[answerKey];
+            setTimeout(() => {
+                answerDiv.classList.add('show');
+            }, 100);
+            
+            // Create hearts animation
+            createHeartsAround(questionCard);
+            
+            // Play a sweet sound (simulated)
+            playSweetSound();
+        }
+
+        // Move no button function (fun interactive feature)
+        function moveNoButton(button) {
+            const card = button.closest('.question-card');
+            const rect = card.getBoundingClientRect();
+            
+            // Animate the button moving away playfully
+            button.style.transition = 'all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            button.style.transform = 'translateX(calc(100vw - ' + (rect.right + 100) + 'px)) rotate(720deg) scale(0)';
+            button.style.opacity = '0';
+            
+            // Show playful message
+            setTimeout(() => {
+                const answerDiv = card.querySelector('.answer-message');
+                answerDiv.innerHTML = "Haha, you can't escape my love that easily, my dear Pratha! 😘 The YES button is waiting for your beautiful heart! 💝";
+                answerDiv.classList.add('show');
+                
+                // Hide the buttons
+                card.querySelector('.question-buttons').style.display = 'none';
+            }, 800);
+            
+            // Create playful hearts
+            createHeartsAround(button);
+        }
+
+        // Create hearts animation around an element
+        function createHeartsAround(element, count = 20) {
+            const rect = element.getBoundingClientRect();
+            const hearts = ['💖', '💕', '💗', '💓', '💝', '💘', '💌', '💞', '🥰', '😍'];
+            
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.position = 'fixed';
+                    heart.style.left = (rect.left + Math.random() * rect.width) + 'px';
+                    heart.style.top = (rect.top + Math.random() * rect.height) + 'px';
+                    heart.style.fontSize = (Math.random() * 25 + 25) + 'px';
+                    heart.style.zIndex = '9999';
+                    heart.style.pointerEvents = 'none';
+                    heart.style.opacity = '0.9';
+                    heart.style.filter = 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))';
+                    
+                    document.body.appendChild(heart);
+                    
+                    // Animate the heart
+                    const animation = heart.animate([
+                        { transform: 'scale(0) rotate(0deg)', opacity: 1 },
+                        { transform: 'scale(1.8) rotate(360deg)', opacity: 0 }
+                    ], {
+                        duration: 1200,
+                        easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                    });
+                    
+                    // Remove heart after animation
+                    animation.onfinish = () => heart.remove();
+                }, i * 80);
+            }
+        }
+
+        // Secret message reveal with grand effect
+        function revealSecretMessage() {
+            const secretMessage = document.getElementById('secretMessage');
+            const button = document.querySelector('.secret-btn');
+            
+            // Animate button disappearance
+            button.style.transform = 'scale(0) rotate(360deg)';
+            button.style.opacity = '0';
+            setTimeout(() => {
+                button.style.display = 'none';
+            }, 500);
+            
+            // Show secret message with animation
+            setTimeout(() => {
+                secretMessage.style.display = 'block';
+                secretMessage.animate([
+                    { transform: 'scale(0.8) translateY(50px)', opacity: 0 },
+                    { transform: 'scale(1) translateY(0)', opacity: 1 }
+                ], {
+                    duration: 800,
+                    easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                });
+            }, 600);
+            
+            // Create massive heart rain
+            createHeartRain(200);
+            
+            // Create floating hearts
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    createHeartsAround(secretMessage, 5);
+                }, i * 100);
+            }
+            
+            // Play magical sound (simulated)
+            playMagicalSound();
+        }
+
+        // Heart rain effect
+        function createHeartRain(count = 100) {
+            const heartRain = document.getElementById('heartRain');
+            const hearts = ['💖', '💕', '💗', '💓', '💝', '💘', '💌', '💞', '💟', '❤️'];
+            
+            heartRain.style.display = 'block';
+            heartRain.innerHTML = '';
+            
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'falling-heart';
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    
+                    // Random properties
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.fontSize = (Math.random() * 30 + 30) + 'px';
+                    const colors = ['#ff69b4', '#ff1493', '#ffc0cb', '#ffb6c1', '#ff85a2'];
+                    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    heart.style.animationDelay = Math.random() * 2 + 's';
+                    heart.style.filter = 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))';
+                    
+                    heartRain.appendChild(heart);
+                    
+                    // Remove heart after animation
+                    setTimeout(() => {
+                        if (heart.parentNode === heartRain) {
+                            heart.remove();
+                        }
+                    }, 6000);
+                }, i * 50);
+            }
+            
+            // Hide heart rain after some time
+            setTimeout(() => {
+                heartRain.style.display = 'none';
+            }, 6000);
+        }
+
+        // Button click effects
+        function showHeartRain() {
+            createHeartRain(150);
+            showNotification("My love for you is like an endless rain of hearts! 💖💕💗");
+        }
+
+        function showBlessingMessage() {
+            showNotification("May God bless my dear Pratha with endless happiness, perfect health, and all the love she deserves! 🙏✨");
+            createHeartsAround(document.querySelector('.blessing-section'), 30);
+        }
+
+        function showSmileMessage() {
+            showNotification("Your smile makes my world go round, Pratha! Keep smiling that beautiful, magical smile! 😊💕");
+        }
+
+        function showFutureMessage() {
+            showNotification("I dream of a beautiful future with you - filled with love, laughter, and countless precious moments! ✨🏡");
+        }
+
+        function showPromiseMessage() {
+            showNotification("I promise to always love you, respect you, cherish you, and make you feel special every single day! 🤝💝");
+        }
+
+        function showQueenMessage() {
+            showNotification("You are my queen, Pratha, and I will always treat you like royalty! 👑💖 Forever and always!");
+        }
+
+        function showLoveMessage() {
+            showNotification("I love you more than all the stars in the sky, more than all the waves in the ocean! You are my everything! 💖🌌");
+            createHeartRain(80);
+        }
+
+        // Notification function
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.background = 'linear-gradient(135deg, #ff69b4, #ff1493)';
+            notification.style.color = 'white';
+            notification.style.padding = '20px 30px';
+            notification.style.borderRadius = '15px';
+            notification.style.boxShadow = '0 10px 30px rgba(255, 105, 180, 0.4)';
+            notification.style.zIndex = '10001';
+            notification.style.fontSize = '1.2rem';
+            notification.style.fontWeight = '600';
+            notification.style.maxWidth = '400px';
+            notification.style.transform = 'translateX(500px)';
+            notification.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            notification.innerHTML = message + ' 💝';
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(500px)';
+                setTimeout(() => {
+                    notification.remove();
+                }, 500);
+            }, 4000);
+        }
+
+        // Floating hearts in background
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const hearts = ['💖', '💕', '💗', '💓', '💝'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                heart.style.color = ['#ff69b4', '#ffc0cb', '#ffb6c1', '#ff85a2'][Math.floor(Math.random() * 4)];
+                heart.style.animationDelay = Math.random() * 15 + 's';
+                heart.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                
+                container.appendChild(heart);
+            }
+        }
+
+        // Sound simulation functions
+        function playSweetSound() {
+            // In a real implementation, you would play an actual sound file
+            console.log("🎵 Playing sweet sound for Pratha...");
+        }
+
+        function playMagicalSound() {
+            console.log("✨ Playing magical sound for the secret message...");
+        }
+
+        // Custom cursor
+        function initCustomCursor() {
+            const cursor = document.getElementById('customCursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursor.style.display = 'block';
+            });
+            
+            // Hide cursor when leaving window
+            document.addEventListener('mouseleave', () => {
+                cursor.style.display = 'none';
+            });
+            
+            // Show cursor when entering window
+            document.addEventListener('mouseenter', () => {
+                cursor.style.display = 'block';
+            });
+            
+            // Click effect
+            document.addEventListener('click', (e) => {
+                createHeartsAround({getBoundingClientRect: () => ({
+                    left: e.clientX - 20,
+                    top: e.clientY - 20,
+                    width: 40,
+                    height: 40
+                })}, 5);
+            });
+        }
+
+        // Open video memory modal
+        function openVideoMemory() {
+            const videoModal = document.createElement('div');
+            videoModal.style.position = 'fixed';
+            videoModal.style.top = '0';
+            videoModal.style.left = '0';
+            videoModal.style.width = '100%';
+            videoModal.style.height = '100%';
+            videoModal.style.background = 'rgba(0,0,0,0.95)';
+            videoModal.style.zIndex = '10001';
+            videoModal.style.display = 'flex';
+            videoModal.style.flexDirection = 'column';
+            videoModal.style.justifyContent = 'center';
+            videoModal.style.alignItems = 'center';
+            videoModal.style.padding = '20px';
+            
+            videoModal.innerHTML = `
+                <button onclick="this.closest('div').remove()" style="position: absolute; top: 20px; right: 30px; background: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 2rem; cursor: pointer; z-index: 10002; transition: all 0.3s;">
+                    ✕
+                </button>
+                <div style="width: 100%; max-width: 900px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(255, 105, 180, 0.5); animation: fadeIn 0.6s;">
+                    <video width="100%" height="auto" controls autoplay style="display: block; width: 100%; border-radius: 20px;">
+                        <source src="video/hello.mp4" type="video/mp4">
+                        <source src="video/hello.MOV" type="video/quicktime">
+                        Your browser doesn't support HTML5 video.
+                    </video>
+                </div>
+                <h2 style="color: white; margin-top: 30px; text-align: center; font-size: 2rem;">Our Beautiful Memories 💖</h2>
+            `;
+            
+            document.body.appendChild(videoModal);
+            createHeartRain(50);
+            showNotification("Enjoy our special video memory together! 🎬💕");
+        }
+
+        // Modal functions for images
+        function openModal(img) {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.background = 'rgba(0,0,0,0.9)';
+            modal.style.zIndex = '10001';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.padding = '20px';
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.position = 'relative';
+            modalContent.style.maxWidth = '90vw';
+            modalContent.style.maxHeight = '90vh';
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '✕';
+            closeBtn.style.position = 'absolute';
+            closeBtn.style.top = '-40px';
+            closeBtn.style.right = '0';
+            closeBtn.style.background = 'white';
+            closeBtn.style.border = 'none';
+            closeBtn.style.borderRadius = '50%';
+            closeBtn.style.width = '50px';
+            closeBtn.style.height = '50px';
+            closeBtn.style.fontSize = '2rem';
+            closeBtn.style.cursor = 'pointer';
+            closeBtn.style.zIndex = '10002';
+            closeBtn.onclick = () => modal.remove();
+            
+            const image = document.createElement('img');
+            image.src = img.src;
+            image.style.maxWidth = '100%';
+            image.style.maxHeight = '100%';
+            image.style.borderRadius = '20px';
+            image.style.boxShadow = '0 20px 60px rgba(255, 105, 180, 0.5)';
+            
+            modalContent.appendChild(closeBtn);
+            modalContent.appendChild(image);
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize everything when page loads
+        window.addEventListener('load', () => {
+            // Create floating hearts
+            createFloatingHearts();
+            
+            // Initialize custom cursor
+            initCustomCursor();
+            
+            // Create initial hearts animation
+            setTimeout(() => {
+                createHeartsAround(document.querySelector('.hero'), 30);
+                showNotification("Welcome to our special love website, my dear Pratha! 💖");
+            }, 1500);
+            
+            // Auto-scroll to reveal sections (optional)
+            // Uncomment if you want automatic scrolling
+            /*
+            let currentSection = 0;
+            const sections = document.querySelectorAll('section');
+            setInterval(() => {
+                if (currentSection < sections.length - 1) {
+                    currentSection++;
+                    sections[currentSection].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 10000);
+            */
+        });
+
+        // Add parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
